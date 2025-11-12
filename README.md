@@ -43,7 +43,6 @@ For detailed architectural diagrams, see [architectural.md](documents/architectu
 ### Core Technologies
 - **Java 17** - Modern language features and performance improvements
 - **Spring Boot 3.5.7** - Latest framework with enhanced performance
-- **Spring Data MongoDB** - Reactive database integration
 - **Embedded MongoDB** - Zero-configuration testing and development
 
 ### Development & Testing
