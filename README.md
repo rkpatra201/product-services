@@ -18,7 +18,7 @@ This application implements a **layered architecture** following **SOLID princip
 - **Domain Layer**: Java 17 records for immutable data structures
 
 For detailed architectural diagrams, see [architectural.md](documents/architectural.md).
-For complete API sequence flows, see [sequence-diagram.md](documents/sequence-diagram.md).
+
 
 ## ✨ Key Features
 
