@@ -418,6 +418,8 @@ mindmap
     D[Dependency Inversion]
       ServiceDependencies["Services depend on abstractions"]
       ConfigurationInjection["Configuration through interfaces"]
+
+%%{init: {"mindmap": {"theme": "dark"}}}%%
 ```
 
 ## Key Architectural Decisions
