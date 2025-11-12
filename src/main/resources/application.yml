@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: product-services
+  data:
+    mongodb:
+      database: productdb
+      port: 0
+
+de:
+  flapdoodle:
+    mongodb:
+      embedded:
+        version: 7.0.14
+
+logging:
+  level:
+    com.example.ps: DEBUG
+    org.springframework.cache: DEBUG
+
+app:
+  cache:
+    type-cache-configs:
+      type-cache:
+        name: type-cache
+        capacity: 2
+        enabled: true
+        count: 10
+      recommendation-cache:
+        name: recommendation-cache
+        capacity: 2
+        enabled: true
+        count: 10
+    simple-cache-configs:
+      id-cache:
+        name: id-cache
+        capacity: 3
+        enabled: true
