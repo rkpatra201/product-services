@@ -400,26 +400,61 @@ graph TD
 ## 7. SOLID Principles Implementation
 
 ```mermaid
-mindmap
-  root((SOLID Principles))
-    S[Single Responsibility]
-      ProductController["Controllers handle HTTP"]
-      ProductService["Services handle business logic"]
-      CacheProvider["Manages cache instances"]
-      ProductRepository["Data access only"]
-    O[Open/Closed]
-      CacheInterface["Cache interface for extension"]
-      StrategyPattern["New cache strategies without modification"]
-    L[Liskov Substitution]
-      CacheImplementations["All cache implementations interchangeable"]
-    I[Interface Segregation]
-      CacheInterface["Focused cache interface"]
-      RepositoryInterface["Specific repository methods"]
-    D[Dependency Inversion]
-      ServiceDependencies["Services depend on abstractions"]
-      ConfigurationInjection["Configuration through interfaces"]
+graph TD
+    Root["SOLID Principles"]
+    
+    S["S - Single Responsibility"]
+    O["O - Open/Closed"]
+    L["L - Liskov Substitution"]
+    I["I - Interface Segregation"]
+    D["D - Dependency Inversion"]
+    
+    PC["Controllers handle HTTP"]
+    PS["Services handle business logic"]
+    CP["Manages cache instances"]
+    PR["Data access only"]
+    
+    CI1["Cache interface for extension"]
+    SP["New cache strategies without modification"]
+    
+    CImpl["All cache implementations interchangeable"]
+    
+    CI2["Focused cache interface"]
+    RI["Specific repository methods"]
+    
+    SD["Services depend on abstractions"]
+    CInj["Configuration through interfaces"]
 
-%%{init: {"mindmap": {"theme": "dark"}}}%%
+    Root --> S
+    Root --> O
+    Root --> L
+    Root --> I
+    Root --> D
+    
+    S --> PC
+    S --> PS
+    S --> CP
+    S --> PR
+    
+    O --> CI1
+    O --> SP
+    
+    L --> CImpl
+    
+    I --> CI2
+    I --> RI
+    
+    D --> SD
+    D --> CInj
+
+    %% Styling
+    classDef root fill:#000000,stroke:#ffffff,stroke-width:3px,color:#ffffff
+    classDef principle fill:#333333,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    classDef implementation fill:#666666,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    
+    class Root root
+    class S,O,L,I,D principle
+    class PC,PS,CP,PR,CI1,SP,CImpl,CI2,RI,SD,CInj implementation
 ```
 
 ## Key Architectural Decisions
