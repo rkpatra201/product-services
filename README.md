@@ -7,8 +7,6 @@
 
 A comprehensive Spring Boot application demonstrating clean architecture, advanced caching strategies, and modern Java development practices. The service provides product metadata management with intelligent recommendation engine and multiple LRU caching implementations.
 
-![Uploading image.png…]()
-
 
 ## 🏗️ Architecture Overview
 
